@@ -1,0 +1,243 @@
+# COS 201 — Week 1 Written Exercises: Solutions
+
+## Activity A — Input, Process and Output (IPO)
+
+### 1. Area of a rectangle (length = 12, width = 5)
+- **Input:** Length = 12, width = 5.
+- **Process:** Area = length × width = 12 × 5 = 60.
+- **Output:** Area = 60 square units.
+
+### 2. Average of four examination scores
+- **Input:** Score 1, score 2, score 3, score 4.
+- **Process:** Total = score 1 + score 2 + score 3 + score 4; average = total ÷ 4.
+- **Output:** Total and average score.
+
+### 3. Classify a number as positive, negative or zero
+- **Input:** One number.
+- **Process:** If number > 0, classify as positive; if number < 0, classify as negative; otherwise classify as zero.
+- **Output:** “Positive”, “Negative” or “Zero”.
+
+### 4. Total price of six items costing ₦250 each
+- **Input:** Quantity = 6; unit price = ₦250.
+- **Process:** Total price = 6 × ₦250 = ₦1,500.
+- **Output:** ₦1,500.
+
+### 5. Count failed login attempts in a sample security log
+- **Input:** A sample security log containing login records and their success/failure status.
+- **Process:** Read each record and add 1 whenever the status is “failed”.
+- **Output:** Total number of failed login attempts.
+
+## Activity B — Algorithms
+
+### 1. Accept two numbers and display their sum
+1. Start.
+2. Input A and B.
+3. Calculate SUM = A + B.
+4. Display SUM.
+5. Stop.
+
+**IPO:** Input: A, B. Process: add A and B. Output: SUM.
+
+### 2. Calculate the area of a circle
+1. Start.
+2. Input radius R.
+3. Calculate AREA = 3.14159 × R × R.
+4. Display AREA.
+5. Stop.
+
+**IPO:** Input: radius. Process: π × radius². Output: circle area.
+
+### 3. Decide whether a student passes (pass mark = 50)
+1. Start.
+2. Input score.
+3. If score is less than 0 or greater than 100, display “Invalid score”.
+4. Otherwise, if score is at least 50, display “Pass”.
+5. Otherwise, display “Fail”.
+6. Stop.
+
+**IPO:** Input: score. Process: validate score and compare with 50. Output: Pass, Fail or Invalid score.
+
+### 4. Accept three numbers and display the largest
+1. Start.
+2. Input A, B and C.
+3. If A ≥ B and A ≥ C, largest = A.
+4. Otherwise, if B ≥ A and B ≥ C, largest = B.
+5. Otherwise, largest = C.
+6. Display largest.
+7. Stop.
+
+**IPO:** Input: A, B, C. Process: compare the three numbers. Output: largest number.
+
+### 5. Calculate total cost from quantity and unit price
+1. Start.
+2. Input quantity and unit price.
+3. Calculate TOTAL = quantity × unit price.
+4. Display TOTAL.
+5. Stop.
+
+**IPO:** Input: quantity and unit price. Process: multiply them. Output: total cost.
+
+## Activity C — Pseudocode and flowcharts
+
+The note asks students to choose any two Activity B problems. Solutions are provided for all five so you can select any two. The flowcharts below are text flowcharts; when drawing them on paper, use an oval for Start/Stop, a parallelogram for Input/Output, a rectangle for calculations, and a diamond for decisions.
+
+### Problem 1: Add two numbers
+
+**Pseudocode**
+```text
+START
+    INPUT A
+    INPUT B
+    SUM = A + B
+    OUTPUT SUM
+STOP
+```
+
+**Flowchart**
+```text
+ (START)
+    |
+ / Input A, B /
+    |
+[ SUM = A + B ]
+    |
+ / Display SUM /
+    |
+  (STOP)
+```
+
+### Problem 2: Area of a circle
+
+**Pseudocode**
+```text
+START
+    INPUT radius
+    AREA = 3.14159 * radius * radius
+    OUTPUT AREA
+STOP
+```
+
+**Flowchart**
+```text
+ (START)
+    |
+ / Input radius /
+    |
+[ AREA = 3.14159 * radius * radius ]
+    |
+ / Display AREA /
+    |
+  (STOP)
+```
+
+### Problem 3: Pass or fail (pass mark = 50)
+
+**Pseudocode**
+```text
+START
+    INPUT score
+    IF score < 0 OR score > 100 THEN
+        OUTPUT "Invalid score"
+    ELSE IF score >= 50 THEN
+        OUTPUT "Pass"
+    ELSE
+        OUTPUT "Fail"
+    END IF
+STOP
+```
+
+**Flowchart**
+```text
+             (START)
+                |
+          / Input score /
+                |
+        < score < 0 OR > 100? >
+          Yes /             \\ No
+             /               \\
+ / Display "Invalid score" /  < score >= 50? >
+             |                Yes /       \\ No
+           (STOP)       / Display Pass /  / Display Fail /
+                               \\           /
+                                  (STOP)
+```
+
+### Problem 4: Largest of three numbers
+
+**Pseudocode**
+```text
+START
+    INPUT A, B, C
+    IF A >= B AND A >= C THEN
+        largest = A
+    ELSE IF B >= A AND B >= C THEN
+        largest = B
+    ELSE
+        largest = C
+    END IF
+    OUTPUT largest
+STOP
+```
+
+**Flowchart**
+```text
+ (START)
+    |
+ / Input A, B, C /
+    |
+ < A >= B AND A >= C? >
+   Yes /              \\ No
+      /                \\
+[largest = A]     < B >= A AND B >= C? >
+                    Yes /           \\ No
+                       /             \\
+               [largest = B]   [largest = C]
+                       \\             /
+                       / Display largest /
+                               |
+                            (STOP)
+```
+
+### Problem 5: Total cost of items
+
+**Pseudocode**
+```text
+START
+    INPUT quantity
+    INPUT unitPrice
+    total = quantity * unitPrice
+    OUTPUT total
+STOP
+```
+
+**Flowchart**
+```text
+ (START)
+    |
+ / Input quantity /
+    |
+ / Input unit price /
+    |
+[ total = quantity * unitPrice ]
+    |
+ / Display total /
+    |
+  (STOP)
+```
+
+public class FirstProgram {
+    public static void main(String[] args) {
+        System.out.println("Welcome to COS 201!");
+        System.out.println("I am learning computer programming.");
+        System.out.println("Programming begins with problem-solving.");
+
+        System.out.println("Course: COS 201 - Computer Programming I");
+        System.out.println("Name: EDEAWE OSIOKALO DANIEL");
+        System.out.println("Matriculation Number: 25/16157");
+        System.out.println("Programme: Cyber Security");
+        System.out.println("Reason 1: Programming helps solve problems.");
+        System.out.println("Reason 2: Programming helps automate tasks.");
+        System.out.println("Reason 3: Programming helps create software.");
+        System.out.println("My goal: To learn how to develop simple Java programs.");
+    }
+}
