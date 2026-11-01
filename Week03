@@ -1,0 +1,87 @@
+import java.util.Scanner;
+
+public class AverageCalculator {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter student name: ");
+        String name = input.nextLine();
+
+        System.out.print("Enter score for Course 1: ");
+        double score1 = input.nextDouble();
+
+        System.out.print("Enter score for Course 2: ");
+        double score2 = input.nextDouble();
+
+        System.out.print("Enter score for Course 3: ");
+        double score3 = input.nextDouble();
+
+        double total = score1 + score2 + score3;
+        double average = total / 3.0;
+
+        System.out.println("\\n--- STUDENT RESULT ---");
+        System.out.println("Student: " + name);
+        System.out.printf("Total: %.2f%n", total);
+        System.out.printf("Average: %.2f%n", average);
+
+        input.close();
+    }
+}
+
+import java.util.Scanner;
+
+public class ItemCost {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter item name: ");
+        String itemName = input.nextLine();
+
+        System.out.print("Enter quantity: ");
+        int quantity = input.nextInt();
+
+        System.out.print("Enter unit price: ");
+        double unitPrice = input.nextDouble();
+
+        double totalCost = quantity * unitPrice;
+
+        System.out.println("\\n--- PURCHASE SUMMARY ---");
+        System.out.println("Item: " + itemName);
+        System.out.println("Quantity: " + quantity);
+        System.out.printf("Unit price: %.2f%n", unitPrice);
+        System.out.printf("Total cost: %.2f%n", totalCost);
+
+        input.close();
+    }
+}
+
+import java.util.Scanner;
+
+public class SimpleCalculator {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the first number: ");
+        double firstNumber = input.nextDouble();
+
+        System.out.print("Enter the second number: ");
+        double secondNumber = input.nextDouble();
+
+        double sum = firstNumber + secondNumber;
+        double difference = firstNumber - secondNumber;
+        double product = firstNumber * secondNumber;
+
+        System.out.printf("Sum: %.2f%n", sum);
+        System.out.printf("Difference: %.2f%n", difference);
+        System.out.printf("Product: %.2f%n", product);
+
+        if (secondNumber != 0) {
+            double quotient = firstNumber / secondNumber;
+            System.out.printf("Quotient: %.2f%n", quotient);
+        } else {
+            System.out.println("Division is undefined for a zero divisor.");
+        }
+
+        input.close();
+    }
+}
